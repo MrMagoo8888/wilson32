@@ -1,27 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="index.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JJP Wilson</title>
+    <title>MM8-OS - The Future of Computing</title>
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
+
     <header>
-        <h1>Welcome to JJP Wilson's Website</h1>
+        <div class="container header-inner">
+            <h1><a href="/index.html">MM8-OS</a></h1>
+            <div class="header-controls">
+                <nav>
+                    <ul class="topnav">
+                        <li><a href="/index.html">Home</a></li>
+                        <li><a href="#">Features</a></li>
+                        <li><a href="#">Download</a></li>
+                        <li><a href="/about.html">About Wilson</a></li>
+                    </ul>
+                </nav>
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+                    <span class="theme-toggle-thumb"></span>
+                </button>
+            </div>
+        </div>
     </header>
 
-        <ul class="topnav">
-            <li><a href="/index.html">Home</a></li>
-            <li><a href="#">News</a></li>
-            <li><a href="#">Contact</a></li>
-            <li><a href="#">About</a></li>
-        </ul>
-
     <main>
-        <h2>About Me</h2>
-        <p>Hi, I'm MrMagoo8888, otherwise known as Wilson, MM8, or </p>
+        <section class="hero">
+            <div class="container">
+                <h2 class="hero-title">MM8-OS</h2>
+                <p class="hero-subtitle">Experience the next generation of operating systems. Powerful, intuitive, and built for creators.</p>
+                <div class="hero-image-placeholder">
+                    <!-- Placeholder for a stunning OS screenshot or render -->
+                     <img src="images/screenshots/main.png"class="hero-image">
+                    <!-- <p>MM8-OS Screenshot</p> -->
+                </div>
+            </div>
+        </section>
+
+        <section class="feature container reveal">
+            <div class="feature-text">
+                <h3>Blazing Fast Performance</h3>
+                <p>Engineered from the ground up for speed. MM8-OS optimizes every cycle to deliver a smooth and responsive experience, whether you're coding, designing, or gaming.</p>
+            </div>
+            <div class="feature-image">
+                <div class="img-placeholder"></div>
+            </div>
+        </section>
+
+        <section class="feature feature-reverse container reveal">
+            <div class="feature-text">
+                <h3>A Modern, Clean UI</h3>
+                <p>A beautifully crafted user interface that gets out of your way. Focus on what matters with a minimalist design that's both powerful and easy to navigate.</p>
+            </div>
+            <div class="feature-image">
+                <div class="img-placeholder"></div>
+            </div>
+        </section>
+        
+        <section class="feature container reveal">
+            <div class="feature-text">
+                <h3>Developer Focused</h3>
+                <p>With a powerful built-in terminal, native container support, and a streamlined development environment, MM8-OS is the ultimate platform for developers.</p>
+            </div>
+            <div class="feature-image">
+                <div class="img-placeholder"></div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <div class="container">
+                <h2>Ready to Dive In?</h2>
+                <p>Explore the future of personal computing today.</p>
+                <a href="#" class="cta-button">Download Now</a>
+            </div>
+        </section>
     </main>
 
+    <footer>
+        <p>&copy; 2024 Wilson. All rights reserved.</p>
+    </footer>
+
+    <script src="index.js"></script>
 </body>
 </html>
