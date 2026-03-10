@@ -304,3 +304,22 @@ footer {
       margin: 0 auto;
   }
 }
+
+/* Cube Video Section */
+.cube-video-section {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.cube-video-section .section-title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: var(--text-color);
+}
+
+.cube-video {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
