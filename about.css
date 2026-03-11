@@ -4,7 +4,27 @@
   --bg-color: #f8fafc;
   --text-color: #1e293b;
   --card-bg: #ffffff;
+  --border-color: #e2e8f0;
   --nav-text: #475569;
+  --heading-color: #0f172a;
+  --footer-text: #64748b;
+  --header-bg: #ffffff;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  --toggle-bg: #d1d5db;
+}
+
+body[data-theme="dark"] {
+  --primary-color: #60a5fa; /* Lighter blue for dark mode */
+  --bg-color: #111827;
+  --text-color: #d1d5db;
+  --card-bg: #1f2937;
+  --border-color: #374151;
+  --nav-text: #9ca3af;
+  --heading-color: #f9fafb;
+  --footer-text: #9ca3af;
+  --header-bg: #1f2937;
+  --shadow-color: rgba(0, 0, 0, 0.4);
+  --toggle-bg: var(--primary-color);
 }
 
 * {
@@ -17,6 +37,7 @@ body {
   background-color: var(--bg-color);
   color: var(--text-color);
   line-height: 1.6;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 .container {
@@ -39,11 +60,12 @@ body {
 
 /* Modern Header */
 header {
-  background-color: #ffffff;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  background-color: var(--header-bg);
+  box-shadow: 0 1px 3px var(--shadow-color);
   position: sticky;
   top: 0;
   z-index: 10;
+  transition: background-color 0.3s, border-color 0.3s;
 }
 
 .header-inner {
@@ -57,6 +79,12 @@ header h1 {
   margin: 0;
   font-size: 1.5rem;
   color: var(--primary-color);
+}
+
+.header-controls {
+  display: flex;
+  align-items: center;
+  gap: 25px;
 }
 
 /* Navigation */
@@ -90,7 +118,52 @@ section {
 h2 {
   font-size: 2rem;
   margin-bottom: 1.5rem;
-  color: #0f172a;
+  color: var(--heading-color);
+}
+
+/* General link styling for main content */
+main p a {
+  color: var(--primary-color);
+  font-weight: 500;
+  text-decoration: none;
+}
+
+main p a:hover {
+  text-decoration: underline;
+}
+
+/* Theme Toggle */
+.theme-toggle {
+  position: relative;
+  width: 48px;
+  height: 26px;
+  border-radius: 13px;
+  background-color: var(--toggle-bg);
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  padding: 0;
+  vertical-align: middle;
+}
+
+.theme-toggle-thumb {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+
+body[data-theme="dark"] .theme-toggle {
+  background-color: var(--primary-color);
+}
+
+body[data-theme="dark"] .theme-toggle-thumb {
+  transform: translateX(22px);
 }
 
 /* Hobby Grid System */
@@ -104,8 +177,9 @@ h2 {
   background: var(--card-bg);
   padding: 25px;
   border-radius: 12px;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 6px -1px var(--shadow-color);
+  border: 1px solid var(--border-color);
+  transition: background-color 0.3s, border-color 0.3s;
 }
 
 .hobby-card h3 {
@@ -123,7 +197,17 @@ h2 {
   padding-left: 0;
   list-style-type: none;
   margin-bottom: 0;
-  color: #475569;
+  color: var(--nav-text);
+}
+
+.hobby-card ul a {
+  color: var(--primary-color);
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.hobby-card ul a:hover {
+  text-decoration: underline;
 }
 
 a.back-link {
@@ -140,9 +224,10 @@ a.back-link {
 
 footer {
   background-color: transparent;
-  color: #64748b;
+  color: var(--footer-text);
   text-align: center;
   padding: 40px 0;
   font-size: 0.9rem;
-  border-top: 1px solid #e2e8f0;
+  border-top: 1px solid var(--border-color);
+  transition: border-color 0.3s;
 }
